@@ -20,5 +20,12 @@ pipeline {
                '''
             }
         }
+         stage("Deploy to DEV") {
+            steps {
+               sh '''
+                   oc new-app quay.io/adacunha-1/hello-springboot:latest
+               '''
+            }
+        }
     }
 }
