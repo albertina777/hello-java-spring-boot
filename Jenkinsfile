@@ -24,6 +24,7 @@ pipeline {
             steps {
                sh '''
                    oc new-app quay.io/adacunha-1/hello-springboot:latest
+                   oc expose service hello-springboot
                '''
             }
         }
